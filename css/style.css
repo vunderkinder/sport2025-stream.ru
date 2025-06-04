@@ -1,4 +1,5 @@
 
+/* Основной стиль страницы */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -9,13 +10,26 @@ body {
     min-height: 100vh;
 }
 
+/* Хедер с логотипом */
 header {
     background-color: #004aad;
     color: white;
-    text-align: center;
-    padding: 1rem;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
+header img {
+    height: 50px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Плеер */
 .player-wrapper {
     flex: 1;
     display: flex;
@@ -32,6 +46,7 @@ header {
     border-radius: 8px;
 }
 
+/* Рекламные блоки */
 .ads-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -47,8 +62,25 @@ header {
     width: 200px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
+.ad-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Расписание */
+.schedule {
+    padding: 1rem;
+    text-align: center;
+}
+
+.schedule h3 {
+    margin-top: 0;
+}
+
+/* Футер */
 footer {
     background-color: #222;
     color: white;
@@ -56,6 +88,47 @@ footer {
     padding: 1rem;
 }
 
+footer button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #004aad;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+footer button:hover {
+    background-color: #0066ff;
+}
+
+/* Темная тема */
+body.dark-mode {
+    background-color: #111;
+    color: #eee;
+}
+
+body.dark-mode header {
+    background-color: #222;
+}
+
+body.dark-mode .player-wrapper iframe {
+    border-color: #666;
+}
+
+body.dark-mode .ad-block {
+    background-color: #333;
+    color: #fff;
+    border-color: #444;
+}
+
+body.dark-mode footer {
+    background-color: #111;
+}
+
+/* Мобильная адаптация */
 @media (max-width: 768px) {
     .player-wrapper iframe {
         height: 300px;
@@ -63,5 +136,9 @@ footer {
 
     .ad-block {
         width: 100%;
+    }
+
+    header h1 {
+        font-size: 20px;
     }
 }
