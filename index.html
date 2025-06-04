@@ -1,22 +1,29 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>sport2025-stream.ru - Футбольные трансляции</title>
+    <title>SPORT2025-STREAM — FIFA CLUB WORLD CUP</title>
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <header>
-        <h1>⚽ SPORT2025-STREAM</h1>
+
+    <!-- Header с логотипом -->
+    <header style="display: flex; align-items: center; gap: 15px; padding: 10px;">
+        <img src="img/logo.png" alt="SPORT2025 STREAM Logo" style="height: 50px;">
+        <h1 style="margin: 0;">SPORT2025-STREAM</h1>
     </header>
 
+    <!-- Main player -->
     <main>
         <div class="player-wrapper">
             <iframe src="" frameborder="0" allowfullscreen id="streamPlayer" title="Трансляция"></iframe>
         </div>
 
+        <!-- Рекламные блоки -->
         <div class="ads-wrapper">
             <div class="ad-block">Реклама: Fonbet</div>
             <div class="ad-block">Реклама: Melbet</div>
@@ -27,10 +34,21 @@
         </div>
     </main>
 
+    <!-- Schedule (позже можно добавить матчи) -->
+    <section class="schedule">
+        <h3>Расписание матчей</h3>
+        <p>Матчи будут добавлены позже...</p>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <p>© 2025 sport2025-stream.ru | Все права защищены</p>
+        <button onclick="toggleTheme()">Переключить тему</button>
     </footer>
 
+    <!-- JS -->
     <script src="js/script.js"></script>
 </body>
 </html>
+
+
