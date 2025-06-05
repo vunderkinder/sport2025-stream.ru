@@ -1,69 +1,107 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>SPORT2025-STREAM — FIFA CLUB WORLD CUP</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
 </head>
 <body>
+    <header>
+        <img src="img/logo.png" alt="SPORT2025 STREAM Logo" class="logo" />
+        <h1>SPORT2025-STREAM</h1>
+    </header>
 
-<header>
-    <img src="img/logo.png" alt="SPORT2025 STREAM Logo" style="height: 40px; vertical-align: middle;">
-    <span style="font-size: 24px; font-weight: bold; margin-left: 10px;">SPORT2025-STREAM</span>
-</header>
+    <main>
 
-<main>
+        <!-- Плеер -->
+        <div id="youtubePlayer" class="player-container">
+            <iframe id="ytFrame" width="100%" height="450" frameborder="0" allowfullscreen></iframe>
+        </div>
 
-    <!-- Плеер -->
-    <div id="player-container" style="max-width: 100%; text-align: center; margin: 20px auto;">
-        <iframe id="player" src="https://example.com" width="100%" height="500" frameborder="0" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/mvXWkBN7KKA" width="100%" height="500" frameborder="0" allowfullscreen></iframe>
+        <video id="videoPlayer" controls width="100%" height="auto" style="max-width: 800px; margin: 20px auto; display: none;"></video>
 
-    </div>
+        <!-- Расписание матчей -->
+        <section>
+            <h2>Расписание матчей</h2>
+            <div class="match-list">
 
-    <!-- Ввод ссылки -->
-    <div style="text-align: center; margin: 10px;">
-        <input type="text" id="stream-url" placeholder="Вставьте ссылку на стрим (iframe)" style="width: 60%; padding: 10px; max-width: 600px;">
-        <button onclick="updatePlayer()" style="padding: 10px 20px; cursor: pointer;">Показать стрим</button>
-    </div>
+                <div class="match">
+                    <p>21:00 — Реал Мадрид vs Ман Сити</p>
+                    <button onclick="playStream('https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8', 'm3u8')">Смотреть</button>
+                </div>
 
-    <!-- Блок рекламы -->
-    <div class="ads-block">
-        <button>Реклама: Fonbet</button>
-        <button>Реклама: Melbet</button>
-        <button>Реклама: Paribet</button>
-        <button>Реклама: Winline</button>
-        <button>Реклама: Liga Stavok</button>
-        <button>Реклама: 1XBET</button>
-    </div>
+                <div class="match">
+                    <p>22:00 — Барселона vs Бавария</p>
+                    <button onclick="playStream('https://www.youtube.com/embed/dQw4w9WgXcQ', 'youtube')">Смотреть</button>
+                </div>
 
-    <!-- Расписание -->
-    <section class="schedule">
-        <h2>Расписание матчей</h2>
-        <p>Матчи будут добавлены позже...</p>
-    </section>
+                <div class="match">
+                    <p>23:00 — Ювентус vs ПСЖ</p>
+                    <button onclick="playStream('https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8', 'm3u8')">Смотреть</button>
+                </div>
 
-</main>
+            </div>
+        </section>
 
-<footer>
-    <p>© 2025 sport2025-stream.ru | Все права защищены</p>
-    <button onclick="toggleTheme()">Переключить тему</button>
-</footer>
+        <!-- Реклама -->
+        <div class="ads">
+            <button>Реклама: Fonbet</button>
+            <button>Реклама: Melbet</button>
+            <button>Реклама: Paribet</button>
+            <button>Реклама: Winline</button>
+            <button>Реклама: Liga Stavok</button>
+            <button>Реклама: 1XBET</button>
+        </div>
 
-<script src="js/script.js"></script>
+    </main>
 
-<!-- JS для обновления плеера -->
-<script>
-function updatePlayer() {
-    var url = document.getElementById('stream-url').value;
-    if (url) {
-        document.getElementById('player').src = url;
-    }
-}
-</script>
+    <footer>
+        <p>© 2025 sport2025-stream.ru | Все права защищены</p>
+        <button onclick="toggleTheme()">Переключить тему</button>
+    </footer>
 
+    <!-- Подключение hls.js -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+        function playStream(url, type) {
+            const ytPlayer = document.getElementById('youtubePlayer');
+            const ytFrame = document.getElementById('ytFrame');
+            const videoPlayer = document.getElementById('videoPlayer');
+
+            if (type === 'youtube') {
+                videoPlayer.style.display = 'none';
+                videoPlayer.pause();
+
+                ytPlayer.style.display = 'block';
+                ytFrame.src = url;
+            } else if (type === 'm3u8') {
+                ytPlayer.style.display = 'none';
+                ytFrame.src = '';
+
+                videoPlayer.style.display = 'block';
+
+                if (Hls.isSupported()) {
+                    const hls = new Hls();
+                    hls.loadSource(url);
+                    hls.attachMedia(videoPlayer);
+                    hls.on(Hls.Events.MANIFEST_PARSED, function () {
+                        videoPlayer.play();
+                    });
+                } else if (videoPlayer.canPlayType('application/vnd.apple.mpegurl')) {
+                    videoPlayer.src = url;
+                    videoPlayer.addEventListener('loadedmetadata', function () {
+                        videoPlayer.play();
+                    });
+                } else {
+                    alert('Ваш браузер не поддерживает HLS (m3u8)');
+                }
+            }
+        }
+    </script>
 </body>
 </html>
 
