@@ -1,4 +1,12 @@
 // script.js
+// Обновляем заголовок с сегодняшней датой
+document.addEventListener('DOMContentLoaded', () => {
+    const matchTitle = document.getElementById('matchTitle');
+    const today = new Date();
+    const options = { day: 'numeric', month: 'long', year: 'numeric' };
+
+    matchTitle.textContent = `Сегодняшние матчи — ${today.toLocaleDateString('ru-RU', options)}`;
+});
 
 // Список матчей
 const matches = [
