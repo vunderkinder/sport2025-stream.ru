@@ -40,6 +40,17 @@ function generateUrl(source, id) {
 function setCategory(category) {
     currentCategory = category;
     loadMatches();
+
+    // Подсветка активной категории
+    const buttons = document.querySelectorAll('.category-btn');
+    buttons.forEach(btn => btn.classList.remove('active-category'));
+
+    // Ищем кнопку с выбранной категорией
+    buttons.forEach(btn => {
+        if (btn.textContent.toLowerCase() === category) {
+            btn.classList.add('active-category');
+        }
+    });
 }
 
 // Функция рендеринга матчей
