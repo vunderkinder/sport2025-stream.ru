@@ -55,28 +55,58 @@ function setCategory(category) {
 
 // Функция рендеринга матчей
 function renderMatches(matches) {
-    const matchList = document.querySelector('.match-list');
+    const matchList = document.getElementById('match-list');
     matchList.innerHTML = '';
 
     matches.forEach(match => {
-        // Фильтр по категории
-        if (currentCategory !== 'все' && match.category !== currentCategory) {
-            return; // пропускаем не ту категорию
-        }
-
-        const url = generateUrl(match.source, match.id);
-
         const matchDiv = document.createElement('div');
         matchDiv.className = 'match';
-
         matchDiv.innerHTML = `
-            <p><strong>${match.time}</strong> — ${match.title} (${match.category})</p>
-            <button onclick="playStream('${url}', '${match.type}')">Смотреть</button>
+            <div>
+                <strong>${match.date} ${match.time}</strong><br>
+                ${match.title}
+            </div>
+            <button onclick="loadMatch('${match.stream}')">Смотреть</button>
         `;
-
         matchList.appendChild(matchDiv);
+
+        // ===== Микроразметка Event для Google =====
+        const eventData = {
+            "@context": "https://schema.org",
+            "@type": "SportsEvent",
+            "name": `${match.title}`,
+            "startDate": `${match.date}T${match.time}:00+03:00`,
+            "location": {
+                "@type": "Place",
+                "name": "FIFA Club World Cup Stadium",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Джидда",
+                    "addressCountry": "SA"
+                }
+            },
+            "url": "https://vunderkinder.github.io/sport2025-stream.ru/",
+            "performer": [
+                {
+                    "@type": "SportsTeam",
+                    "name": match.title.split(' — ')[0]
+                },
+                {
+                    "@type": "SportsTeam",
+                    "name": match.title.split(' — ')[1] || "Неизвестный соперник"
+                }
+            ],
+            "eventStatus": "https://schema.org/EventScheduled",
+            "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode"
+        };
+
+        const ldJsonScript = document.createElement('script');
+        ldJsonScript.type = 'application/ld+json';
+        ldJsonScript.textContent = JSON.stringify(eventData, null, 2);
+        document.body.appendChild(ldJsonScript);
     });
 }
+
 
 // Загрузка матчей из matches.json с анти-кешем
 function loadMatches() {
