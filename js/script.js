@@ -39,7 +39,7 @@ function renderMatches(matches) {
 
 // Загрузка матчей из matches.json
 function loadMatches() {
-    fetch('matches.json')
+    fetch('matches.json?nocache=' + new Date().getTime())
         .then(response => response.json())
         .then(data => {
             renderMatches(data);
