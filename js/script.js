@@ -97,3 +97,22 @@ document.addEventListener('DOMContentLoaded', loadMatches);
 function toggleTheme() {
     document.body.classList.toggle('dark-mode');
 }
+// Переключение темы (светлая/тёмная)
+function toggleTheme() {
+    document.body.classList.toggle('dark-theme');
+
+    // Можно сохранить в localStorage, чтобы при следующем заходе запомнилось
+    if (document.body.classList.contains('dark-theme')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
+}
+
+// При загрузке страницы — проверим saved theme
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+    }
+});
