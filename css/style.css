@@ -1,130 +1,157 @@
+/* Основные стили */
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #222;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    background-color: #f2f2f2;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-    background-color: #004aad;
-    color: white;
-    padding: 10px 20px;
     display: flex;
     align-items: center;
-    gap: 15px;
+    background-color: #0044cc;
+    color: #fff;
+    padding: 10px 20px;
 }
 
 header img.logo {
-    height: 50px;
+    height: 40px;
+    margin-right: 15px;
 }
 
-main {
-    flex: 1;
-    padding: 1rem;
+header h1 {
+    font-size: 20px;
+    margin: 0;
 }
 
-.player-container {
+/* Плеер */
+.player-container, #videoPlayer {
+    max-width: 100%;
+    margin: 20px auto;
+    display: block;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Секция матчей */
+section {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
     text-align: center;
-    margin-bottom: 20px;
+    color: #0044cc;
 }
 
 .match-list {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 20px;
+    gap: 10px;
+    margin-top: 10px;
 }
 
 .match {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fafafa;
+    transition: background-color 0.2s ease;
+}
+
+.match:hover {
+    background-color: #f0f8ff;
 }
 
 .match button {
-    padding: 8px 16px;
-    font-size: 14px;
-    background-color: #004aad;
-    color: white;
+    background-color: #0044cc;
+    color: #fff;
     border: none;
-    border-radius: 5px;
+    padding: 8px 14px;
+    border-radius: 4px;
     cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
 }
 
 .match button:hover {
-    background-color: #0066ff;
+    background-color: #0033aa;
 }
 
+/* Реклама */
 .ads {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
     justify-content: center;
-    margin-bottom: 20px;
+    gap: 10px;
+    margin: 20px auto;
+    max-width: 900px;
 }
 
 .ads button {
-    padding: 10px;
-    font-size: 14px;
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
 }
 
 .ads button:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    background-color: #ffbb00;
 }
 
+/* Футер */
 footer {
-    background-color: #222;
-    color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 15px;
+    background-color: #222;
+    color: #aaa;
+    margin-top: 40px;
 }
 
 footer button {
-    margin-top: 10px;
-    padding: 8px 16px;
-    font-size: 14px;
+    margin-top: 8px;
+    background-color: #444;
+    color: #fff;
     border: none;
-    border-radius: 5px;
-    background-color: #004aad;
-    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.2s;
 }
 
 footer button:hover {
-    background-color: #0066ff;
+    background-color: #555;
 }
 
-body.dark-mode {
-    background-color: #111;
-    color: #eee;
-}
+/* Адаптив */
+@media (max-width: 600px) {
+    .match {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-body.dark-mode header {
-    background-color: #222;
-}
+    .match button {
+        margin-top: 8px;
+        width: 100%;
+    }
 
-body.dark-mode .match {
-    background-color: #333;
-    border-color: #444;
-}
+    .ads {
+        flex-direction: column;
+        align-items: center;
+    }
 
-body.dark-mode .ads button {
-    background-color: #333;
-    border-color: #444;
-    color: white;
-}
-
-body.dark-mode footer {
-    background-color: #111;
+    .ads button {
+        width: 90%;
+    }
 }
