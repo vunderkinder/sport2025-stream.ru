@@ -8,10 +8,10 @@ function playStream(url, type) {
         videoPlayer.style.display = 'none';
         videoPlayer.pause();
 
+        youtubePlayer.style.display = 'block';
         ytFrame.src = url;
-        ytFrame.style.display = 'block';
     } else if (type === 'm3u8') {
-        ytFrame.style.display = 'none';
+        youtubePlayer.style.display = 'none';
         ytFrame.src = '';
 
         videoPlayer.src = url;
@@ -21,23 +21,39 @@ function playStream(url, type) {
     }
 }
 
+// Генератор URL по source и id
+function generateUrl(source, id) {
+    if (source === 'youtube') {
+        return `https://www.youtube.com/embed/${id}`;
+    } else if (source === 'm3u8') {
+        return id; // для m3u8 ссылка уже полная
+    } else {
+        console.warn('Неизвестный source:', source);
+        return '';
+    }
+}
+
 // Функция рендеринга матчей
 function renderMatches(matches) {
     const matchList = document.querySelector('.match-list');
     matchList.innerHTML = '';
 
     matches.forEach(match => {
+        const url = generateUrl(match.source, match.id);
+
         const matchDiv = document.createElement('div');
         matchDiv.className = 'match';
 
-        const button = `<button onclick="playStream('${match.url}', '${match.type}')">Смотреть</button>`;
+        matchDiv.innerHTML = `
+            <p><strong>${match.time}</strong> — ${match.title}</p>
+            <button onclick="playStream('${url}', '${match.type}')">Смотреть</button>
+        `;
 
-        matchDiv.innerHTML = `<strong>${match.time}</strong> — ${match.title} ${button}`;
         matchList.appendChild(matchDiv);
     });
 }
 
-// Загрузка матчей из matches.json
+// Загрузка матчей из matches.json с анти-кешем
 function loadMatches() {
     fetch('matches.json?nocache=' + new Date().getTime())
         .then(response => response.json())
@@ -51,3 +67,4 @@ function loadMatches() {
 
 // При загрузке страницы — загружаем матчи
 document.addEventListener('DOMContentLoaded', loadMatches);
+
