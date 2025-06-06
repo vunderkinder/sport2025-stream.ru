@@ -240,3 +240,23 @@ body.dark-theme button {
     color: #fff;
     border-color: #555;
 }
+/* Темная тема для матчей */
+body.dark-theme .match {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #333;
+}
+
+/* Темная тема для кнопок категорий */
+body.dark-theme .category-btn {
+    background-color: #333;
+    color: #fff;
+    border-color: #555;
+}
+
+/* Темная тема для кнопок "Смотреть" */
+body.dark-theme .match button {
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #666;
+}
