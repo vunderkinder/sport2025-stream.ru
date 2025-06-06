@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vunderkinder.github.io/sport2025-stream.ru/sitemap.xml
