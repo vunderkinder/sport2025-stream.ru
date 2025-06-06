@@ -4,20 +4,31 @@
         "title": "Реал Мадрид vs Ман Сити",
         "source": "m3u8",
         "id": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
-        "type": "m3u8"
+        "type": "m3u8",
+        "category": "футбол"
     },
     {
         "time": "22:00",
-        "title": "Барселона vs Спартак",
+        "title": "NAVI vs Virtus.Pro",
         "source": "youtube",
         "id": "dQw4w9WgXcQ",
-        "type": "youtube"
+        "type": "youtube",
+        "category": "киберспорт"
     },
     {
         "time": "23:00",
-        "title": "Ювентус vs ПСЖ",
+        "title": "СКА vs ЦСКА",
         "source": "m3u8",
         "id": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
-        "type": "m3u8"
+        "type": "m3u8",
+        "category": "хоккей"
+    },
+    {
+        "time": "00:00",
+        "title": "Тест матч другое",
+        "source": "m3u8",
+        "id": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+        "type": "m3u8",
+        "category": "другое"
     }
 ]
