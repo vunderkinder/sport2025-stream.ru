@@ -185,3 +185,27 @@ footer button:hover {
     color: white;
     border-color: #0033aa;
 }
+.ads {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+.ads a {
+    background-color: #ffcc00;
+    color: #000;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.ads a:hover {
+    background-color: #ffbb00;
+    color: #000;
+}
