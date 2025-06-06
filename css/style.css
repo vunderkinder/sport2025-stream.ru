@@ -223,3 +223,20 @@ footer button:hover {
 .menu-link:hover {
     background-color: #0033aa;
 }
+/* Темная тема */
+body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-theme header,
+body.dark-theme footer,
+body.dark-theme .categories {
+    background-color: #1e1e1e;
+}
+
+body.dark-theme button {
+    background-color: #333;
+    color: #fff;
+    border-color: #555;
+}
