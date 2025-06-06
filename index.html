@@ -24,9 +24,16 @@
 
         <!-- Расписание матчей -->
            <section>
-              <h2 id="matchTitle">Сегодняшние матчи</h2>
-        <div class="match-list" id="match-list"></div>
-           </section>                   
+    <h2 id="matchTitle">Сегодняшние матчи</h2>
+
+    <!-- КНОПКА Обновить -->
+    <div style="text-align: center; margin-bottom: 15px;">
+        <button onclick="loadMatches()">🔄 Обновить матчи</button>
+    </div>
+
+    <div class="match-list" id="match-list"></div>
+        </section>
+                   
         <!-- Реклама -->
         <div class="ads">
             <button>Реклама: Fonbet</button>
