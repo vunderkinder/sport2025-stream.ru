@@ -155,3 +155,33 @@ footer button:hover {
         width: 90%;
     }
 }
+/* Подсветка активной категории */
+.categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0;
+    background-color: #eee;
+    padding: 8px 0;
+}
+
+.category-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 8px 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.category-btn:hover {
+    background-color: #ddd;
+}
+
+.category-btn.active-category {
+    background-color: #0044cc;
+    color: white;
+    border-color: #0033aa;
+}
