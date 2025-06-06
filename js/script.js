@@ -1,55 +1,17 @@
-// 1. МАССИВ МАТЧЕЙ
-const matches = [
-    {
-        time: '21:00',
-        title: 'Реал Мадрид vs Ман Сити',
-        url: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8',
-        type: 'm3u8'
-    },
-    {
-        time: '22:00',
-        title: 'Барселона vs Бавария',
-        url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-        type: 'youtube'
-    },
-    {
-        time: '23:00',
-        title: 'Ювентус vs ПСЖ',
-        url: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8',
-        type: 'm3u8'
-    }
-];
-
-// 2. ФУНКЦИЯ — рисуем матчи
-function renderMatches() {
-    const matchList = document.getElementById('match-list');
-    matchList.innerHTML = '';
-
-    matches.forEach(match => {
-        const matchDiv = document.createElement('div');
-        matchDiv.classList.add('match');
-
-        matchDiv.innerHTML = `
-            <p><strong>${match.time}</strong> — ${match.title}</p>
-            <button onclick="playStream('${match.url}', '${match.type}')">Смотреть</button>
-        `;
-
-        matchList.appendChild(matchDiv);
-    });
-}
-
-// 3. ФУНКЦИЯ — запуск стрима
+// Функция запуска стрима
 function playStream(url, type) {
     const youtubePlayer = document.getElementById('youtubePlayer');
-    const ytFrame = document.getElementById('ytframe');
     const videoPlayer = document.getElementById('videoPlayer');
+    const ytFrame = document.getElementById('ytFrame');
 
     if (type === 'youtube') {
         videoPlayer.style.display = 'none';
-        youtubePlayer.style.display = 'block';
+        videoPlayer.pause();
+
         ytFrame.src = url;
+        ytFrame.style.display = 'block';
     } else if (type === 'm3u8') {
-        youtubePlayer.style.display = 'none';
+        ytFrame.style.display = 'none';
         ytFrame.src = '';
 
         videoPlayer.src = url;
@@ -59,5 +21,33 @@ function playStream(url, type) {
     }
 }
 
-// 4. При загрузке страницы — рисуем матчи
-document.addEventListener('DOMContentLoaded', renderMatches);
+// Функция рендеринга матчей
+function renderMatches(matches) {
+    const matchList = document.querySelector('.match-list');
+    matchList.innerHTML = '';
+
+    matches.forEach(match => {
+        const matchDiv = document.createElement('div');
+        matchDiv.className = 'match';
+
+        const button = `<button onclick="playStream('${match.url}', '${match.type}')">Смотреть</button>`;
+
+        matchDiv.innerHTML = `<strong>${match.time}</strong> — ${match.title} ${button}`;
+        matchList.appendChild(matchDiv);
+    });
+}
+
+// Загрузка матчей из matches.json
+function loadMatches() {
+    fetch('matches.json')
+        .then(response => response.json())
+        .then(data => {
+            renderMatches(data);
+        })
+        .catch(error => {
+            console.error('Ошибка загрузки матчей:', error);
+        });
+}
+
+// При загрузке страницы — загружаем матчи
+document.addEventListener('DOMContentLoaded', loadMatches);
