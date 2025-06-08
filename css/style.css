@@ -1,241 +1,212 @@
-/* Сброс стилей */
-body, h1, h2, p, a, button {
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: #f5f5f5;
+    background-color: #f0f0f0;
     color: #222;
-    line-height: 1.6;
-    padding-bottom: 50px;
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Темная тема */
-body.dark-theme {
-    background-color: #1e1e1e;
-    color: #eee;
-}
-
-/* Хедер */
-.site-header {
-    background-color: #0d47a1;
-    color: #fff;
-    padding: 15px 10px;
+h1, h2 {
     text-align: center;
-    border-bottom: 3px solid #1565c0;
+    color: #003366;
 }
 
-.site-header .site-logo {
-    height: 50px;
-    vertical-align: middle;
-    margin-right: 10px;
+header {
+    background-color: #003366;
+    padding: 15px;
+    text-align: center;
+    color: #fff;
 }
 
-.site-header .site-title {
-    display: inline-block;
-    font-size: 24px;
-    font-weight: bold;
-    vertical-align: middle;
+.menu-top {
+    margin: 10px 0;
+    text-align: center;
 }
 
-/* Верхнее меню */
-.top-menu {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.top-menu a {
-    display: inline-block;
+.menu-top a {
     margin: 0 10px;
-    color: #fff;
     text-decoration: none;
+    color: #fff;
     font-weight: bold;
 }
 
-.top-menu a:hover {
-    text-decoration: underline;
-}
-
-/* Категории */
 .categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     margin: 15px 0;
-    text-align: center;
 }
 
-.category-btn {
+.categories button {
+    margin: 5px;
+    padding: 8px 15px;
+    border: none;
     background-color: #444;
     color: #fff;
-    border: none;
-    padding: 8px 14px;
-    margin: 5px;
-    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.category-btn:hover {
-    background-color: #666;
-}
-
-/* Плеер */
-.player-container {
-    max-width: 800px;
-    margin: 20px auto;
-}
-
-#videoPlayer {
-    display: none;
-}
-
-/* Заголовок матчей */
-#matchTitle {
-    text-align: center;
-    margin: 20px 0 10px 0;
-    font-size: 22px;
-    color: #0d47a1;
-}
-
-/* Список матчей */
-.match-list {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 10px;
-}
-
-.match {
-    background-color: #fff;
-    padding: 12px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    border-radius: 5px;
     transition: background-color 0.3s;
 }
 
-.match img {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
+.categories button:hover {
+    background-color: #0066cc;
 }
 
-.match:hover {
-    background-color: #f0f0f0;
+.match-list {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 15px;
 }
 
-.match button {
-    background-color: #1976d2;
-    color: #fff;
-    border: none;
-    padding: 8px 14px;
+.match-card {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 12px;
+    padding: 10px;
+    transition: transform 0.2s;
+}
+
+.match-card:hover {
+    transform: translateY(-2px);
+}
+
+.match-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
     border-radius: 5px;
+    margin-right: 15px;
+}
+
+.match-info {
+    flex-grow: 1;
+}
+
+.match-info button {
+    margin-top: 8px;
+    padding: 6px 12px;
+    border: none;
+    background-color: #0066cc;
+    color: #fff;
     cursor: pointer;
-    transition: background-color 0.2s;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-.match button:hover {
-    background-color: #1565c0;
+.match-info button:hover {
+    background-color: #004999;
 }
 
-/* Темная тема для матчей */
-body.dark-theme .match {
-    background-color: #2c2c2c;
-    border-color: #444;
-}
-
-body.dark-theme .match:hover {
-    background-color: #383838;
-}
-
-body.dark-theme .match button {
-    background-color: #2979ff;
-}
-
-/* Блок рекламы */
 .ads {
-    max-width: 800px;
-    margin: 30px auto;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    gap: 10px;
 }
 
 .ads a {
-    display: inline-block;
+    padding: 8px 16px;
     background-color: gold;
-    color: #000;
-    font-weight: bold;
+    color: #222;
     text-decoration: none;
-    padding: 8px 14px;
-    margin: 5px;
+    font-weight: bold;
     border-radius: 5px;
-    transition: background-color 0.2s;
+    transition: background-color 0.3s;
 }
 
 .ads a:hover {
-    background-color: orange;
+    background-color: #ffcc00;
 }
 
-/* Футер */
 footer {
-    margin-top: 40px;
-    padding: 15px;
-    background-color: #0d47a1;
-    color: #fff;
+    background-color: #222;
+    color: #ccc;
     text-align: center;
-    font-size: 14px;
-}
-
-footer a {
-    color: #fff;
-    margin: 0 5px;
-    text-decoration: underline;
+    padding: 15px;
+    margin-top: 30px;
 }
 
 footer button {
-    margin-top: 10px;
-    padding: 5px 10px;
+    margin-top: 8px;
+    padding: 6px 12px;
     border: none;
-    background-color: #fff;
-    color: #0d47a1;
+    background-color: #444;
+    color: #fff;
     cursor: pointer;
     border-radius: 5px;
 }
 
 footer button:hover {
-    background-color: #eee;
+    background-color: #666;
 }
 
-/* Адаптивность */
-@media (max-width: 600px) {
-    .categories {
-        flex-wrap: wrap;
-    }
+footer a {
+    color: #aaa;
+    text-decoration: none;
+    margin: 0 5px;
+}
 
-    .category-btn {
-        display: block;
-        width: 90%;
-        margin: 8px auto;
-    }
+footer a:hover {
+    text-decoration: underline;
+}
 
-    .top-menu a {
-        display: block;
-        margin: 8px 0;
-    }
+/* Тёмная тема */
+body.dark-theme {
+    background-color: #1c1c1c;
+    color: #eee;
+}
 
-    .match {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+body.dark-theme header {
+    background-color: #222;
+}
 
-    .match img {
-        margin-bottom: 8px;
-    }
+body.dark-theme .categories button {
+    background-color: #333;
+    color: #eee;
+}
 
-    .match button {
-        align-self: flex-end;
-    }
+body.dark-theme .categories button:hover {
+    background-color: #555;
+}
+
+body.dark-theme .match-card {
+    background-color: #2a2a2a;
+    color: #eee;
+}
+
+body.dark-theme .match-info button {
+    background-color: #0066cc;
+    color: #fff;
+}
+
+body.dark-theme .ads a {
+    background-color: #444;
+    color: #fff;
+}
+
+body.dark-theme .ads a:hover {
+    background-color: #666;
+}
+
+body.dark-theme footer {
+    background-color: #111;
+    color: #888;
+}
+
+body.dark-theme footer button {
+    background-color: #333;
+}
+
+body.dark-theme footer button:hover {
+    background-color: #555;
+}
+
+body.dark-theme footer a {
+    color: #aaa;
 }
