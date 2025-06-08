@@ -25,7 +25,7 @@ function renderMatches(matches) {
                 <strong>${match.date} ${match.time}</strong><br>
                 ${match.title}
             </div>
-            <button onclick="loadMatch('${match.stream}')">Смотреть</button>
+            <button onclick="playStream('${match.stream}', 'm3u8')">Смотреть</button>
         `;
         matchList.appendChild(matchDiv);
     });
@@ -52,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
 function toggleTheme() {
     document.body.classList.toggle('dark-theme');
 
-    // Можно сохранить в localStorage
     if (document.body.classList.contains('dark-theme')) {
         localStorage.setItem('theme', 'dark');
     } else {
