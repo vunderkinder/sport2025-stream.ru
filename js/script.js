@@ -129,7 +129,10 @@ function showCategory(category) {
 
 
 // При загрузке страницы — загружаем матчи
-document.addEventListener('DOMContentLoaded', loadMatches);
+document.addEventListener('DOMContentLoaded', () => {
+    loadMatches();
+});
+
 
 // Переключение темы
 function toggleTheme() {
