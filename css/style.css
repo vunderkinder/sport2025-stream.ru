@@ -1,192 +1,229 @@
-/* Базовый стиль */
-body {
+/* Сброс стилей */
+body, h1, h2, p, a, button {
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
     background-color: #f5f5f5;
     color: #222;
+    line-height: 1.6;
+    padding-bottom: 50px;
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Тёмная тема */
+/* Темная тема */
 body.dark-theme {
-    background-color: #121212;
-    color: #f0f0f0;
+    background-color: #1e1e1e;
+    color: #eee;
 }
 
 /* Хедер */
-header {
-    background-color: #222;
+.site-header {
+    background-color: #0d47a1;
     color: #fff;
-    padding: 10px 20px;
+    padding: 15px 10px;
     text-align: center;
+    border-bottom: 3px solid #1565c0;
 }
 
-header img.logo {
-    max-height: 50px;
+.site-header .site-logo {
+    height: 50px;
     vertical-align: middle;
-    cursor: pointer;
+    margin-right: 10px;
 }
 
-header h1 {
+.site-header .site-title {
     display: inline-block;
-    margin: 0 10px;
     font-size: 24px;
+    font-weight: bold;
     vertical-align: middle;
 }
 
-/* Категории */
-nav.categories {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px;
-    padding: 10px;
-}
-
-nav.categories .category-btn {
-    padding: 8px 14px;
-    border: none;
-    background-color: #444;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.2s;
-}
-
-nav.categories .category-btn:hover {
-    background-color: #666;
-}
-
-nav.categories .category-btn.active {
-    background-color: #007bff;
-}
-
-/* Плеер */
-#youtubePlayer, #videoPlayer {
-    margin: 20px auto;
-    max-width: 900px;
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-/* Секция матчей */
-section {
-    padding: 20px;
-    text-align: center;
-}
-
-#matchTitle {
-    font-size: 24px;
+/* Верхнее меню */
+.top-menu {
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 
-/* Карточка матча */
-.match {
-    background-color: #fff;
-    color: #222;
-    margin: 10px auto;
-    padding: 15px;
-    border-radius: 8px;
-    max-width: 800px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    transition: transform 0.2s;
+.top-menu a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.match:hover {
-    transform: translateY(-3px);
+.top-menu a:hover {
+    text-decoration: underline;
+}
+
+/* Категории */
+.categories {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.category-btn {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.category-btn:hover {
+    background-color: #666;
+}
+
+/* Плеер */
+.player-container {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+#videoPlayer {
+    display: none;
+}
+
+/* Заголовок матчей */
+#matchTitle {
+    text-align: center;
+    margin: 20px 0 10px 0;
+    font-size: 22px;
+    color: #0d47a1;
+}
+
+/* Список матчей */
+.match-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.match {
+    background-color: #fff;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s;
 }
 
 .match img {
-    width: 80px;
+    width: 50px;
     height: 50px;
-    object-fit: cover;
-    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.match:hover {
+    background-color: #f0f0f0;
 }
 
 .match button {
-    margin-left: auto;
-    padding: 8px 12px;
-    background-color: #007bff;
+    background-color: #1976d2;
     color: #fff;
     border: none;
+    padding: 8px 14px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.2s;
 }
 
 .match button:hover {
-    background-color: #0056b3;
+    background-color: #1565c0;
 }
 
 /* Темная тема для матчей */
 body.dark-theme .match {
-    background-color: #1e1e1e;
-    color: #f0f0f0;
+    background-color: #2c2c2c;
+    border-color: #444;
 }
 
-/* Реклама */
+body.dark-theme .match:hover {
+    background-color: #383838;
+}
+
+body.dark-theme .match button {
+    background-color: #2979ff;
+}
+
+/* Блок рекламы */
 .ads {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin: 20px 0;
+    max-width: 800px;
+    margin: 30px auto;
+    text-align: center;
 }
 
 .ads a {
     display: inline-block;
-    padding: 10px 14px;
-    background-color: #ffcc00;
-    color: #222;
-    text-decoration: none;
-    border-radius: 6px;
+    background-color: gold;
+    color: #000;
     font-weight: bold;
+    text-decoration: none;
+    padding: 8px 14px;
+    margin: 5px;
+    border-radius: 5px;
     transition: background-color 0.2s;
 }
 
 .ads a:hover {
-    background-color: #e6b800;
+    background-color: orange;
 }
 
-/* Footer */
+/* Футер */
 footer {
-    text-align: center;
+    margin-top: 40px;
     padding: 15px;
-    background-color: #222;
-    color: #aaa;
-    margin-top: 30px;
+    background-color: #0d47a1;
+    color: #fff;
+    text-align: center;
     font-size: 14px;
 }
 
 footer a {
-    color: #4dabf7;
-    text-decoration: none;
+    color: #fff;
     margin: 0 5px;
+    text-decoration: underline;
 }
 
 footer button {
-    margin-top: 8px;
-    padding: 6px 12px;
-    background-color: #444;
-    color: #fff;
+    margin-top: 10px;
+    padding: 5px 10px;
     border: none;
-    border-radius: 5px;
+    background-color: #fff;
+    color: #0d47a1;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 footer button:hover {
-    background-color: #666;
+    background-color: #eee;
 }
 
-/* Responsive */
+/* Адаптивность */
 @media (max-width: 600px) {
-    nav.categories {
-        flex-direction: column;
-        align-items: center;
+    .categories {
+        flex-wrap: wrap;
+    }
+
+    .category-btn {
+        display: block;
+        width: 90%;
+        margin: 8px auto;
+    }
+
+    .top-menu a {
+        display: block;
+        margin: 8px 0;
     }
 
     .match {
@@ -195,12 +232,10 @@ footer button:hover {
     }
 
     .match img {
-        width: 100%;
-        height: auto;
+        margin-bottom: 8px;
     }
 
     .match button {
-        align-self: stretch;
-        margin-top: 10px;
+        align-self: flex-end;
     }
 }
