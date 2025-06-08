@@ -1,18 +1,18 @@
 [
     {
-        "title": "Футбол: Аль-Иттихад — Манчестер Сити",
         "category": "футбол",
+        "title": "Футбол: Аль-Иттихад — Манчестер Сити",
         "date": "2025-12-15 21:00",
-        "image": "img/fifa1.jpg",
-        "url": "https://www.youtube.com/embed/VIDEO_ID",
+        "image": "img/fifa2025_match1.png",
+        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         "type": "youtube"
     },
     {
-        "title": "Футбол: Леон — Урава Ред Даймондс",
         "category": "футбол",
+        "title": "Футбол: Леон — Урава Ред Даймондс",
         "date": "2025-12-16 20:00",
-        "image": "img/fifa2.jpg",
-        "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
-        "type": "m3u8"
+        "image": "img/fifa2025_match2.png",
+        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "type": "youtube"
     }
 ]
