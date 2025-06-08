@@ -1,23 +1,18 @@
 [
     {
         "title": "Футбол: Аль-Иттихад — Манчестер Сити",
-        "category": "Футбол",
-        "date": "2025-12-15",
-        "time": "21:00",
-        "stream": "https://example.com/fifa-club-world-cup-1.m3u8"
+        "category": "футбол",
+        "date": "2025-12-15 21:00",
+        "image": "img/fifa1.jpg",
+        "url": "https://www.youtube.com/embed/VIDEO_ID",
+        "type": "youtube"
     },
     {
         "title": "Футбол: Леон — Урава Ред Даймондс",
-        "category": "Футбол",
-        "date": "2025-12-16",
-        "time": "20:00",
-        "stream": "https://example.com/fifa-club-world-cup-2.m3u8"
-    },
-    {
-        "title": "Футбол: Манчестер Сити — Финалист TBD",
-        "category": "Футбол",
-        "date": "2025-12-22",
-        "time": "21:00",
-        "stream": "https://example.com/fifa-club-world-cup-final.m3u8"
+        "category": "футбол",
+        "date": "2025-12-16 20:00",
+        "image": "img/fifa2.jpg",
+        "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+        "type": "m3u8"
     }
 ]
