@@ -108,17 +108,25 @@ function renderMatches(matches) {
 }
 
 
-// Загрузка матчей из matches.json с анти-кешем
+let allMatches = []; // глобальная переменная для хранения всех матчей
+
+// Загрузка матчей с matches.json
 function loadMatches() {
-    fetch('matches.json?nocache=' + new Date().getTime())
+    fetch('matches.json')
         .then(response => response.json())
         .then(data => {
-            renderMatches(data);
+            allMatches = data;
+            renderMatches(allMatches);
         })
-        .catch(error => {
-            console.error('Ошибка загрузки матчей:', error);
-        });
+        .catch(error => console.error('Ошибка загрузки матчей:', error));
 }
+
+// Фильтрация по категории
+function showCategory(category) {
+    const filteredMatches = allMatches.filter(match => match.category.toLowerCase() === category.toLowerCase());
+    renderMatches(filteredMatches);
+}
+
 
 // При загрузке страницы — загружаем матчи
 document.addEventListener('DOMContentLoaded', loadMatches);
