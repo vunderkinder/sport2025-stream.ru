@@ -1,0 +1,15 @@
+{
+  "name": "SPORT2025-STREAM",
+  "short_name": "SPORT2025",
+  "start_url": "https://vunderkinder.github.io/sport2025-stream.ru/",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#121212",
+  "icons": [
+    {
+      "src": "img/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
