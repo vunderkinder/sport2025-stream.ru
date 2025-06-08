@@ -212,3 +212,22 @@ body.dark-theme footer a {
     width: 100%;
   }
 }
+/* == Навигация внутренних страниц (где смотреть, партнеры, архив) == */
+.page-nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;            /* расстояние между ссылками */
+  margin-bottom: 24px;  /* отступ снизу перед заголовком */
+  font-size: 0.95rem;
+}
+.page-nav a {
+  color: #fff;              /* белый текст */
+  background: rgba(0,0,0,0.2);
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background .2s, color .2s;
+}
+.page-nav a:hover {
+  background: #ffeb3b;      /* жёлтый фон при наведении */
+  color: #121212;           /* чёрный текст при наведении */
+}
