@@ -36,7 +36,7 @@
       "sameAs": [
         "https://t.me/sport2025stream",
         "https://www.instagram.com/sport2025stream",
-        "https://www.youtube.com/@sport2025stream"
+        "https://www.youtube.com/@slonik"
       ]
     }
     </script>
@@ -54,71 +54,66 @@
 </head>
 <body>
     <header>
-         <nav class="categories">
-<button class="category-btn" onclick="showCategory('футбол')">Футбол</button>
-<button class="category-btn" onclick="showCategory('хоккей')">Хоккей</button>
-<button class="category-btn" onclick="showCategory('киберспорт')">Киберспорт</button>
-<button class="category-btn" onclick="showCategory('другое')">Другое</button>
+        <nav class="categories">
+            <button class="category-btn" onclick="showCategory('футбол')">Футбол</button>
+            <button class="category-btn" onclick="showCategory('хоккей')">Хоккей</button>
+            <button class="category-btn" onclick="showCategory('киберспорт')">Киберспорт</button>
+            <button class="category-btn" onclick="showCategory('другое')">Другое</button>
+        </nav>
 
-</nav>
-
-<!-- Меню ссылка -->
-<div style="text-align: center; margin: 10px;">
-    <a href="where-to-watch.html" class="menu-link">Где смотреть</a>
-    <a href="partners.html" class="menu-link">Наши партнёры</a>
-    <a href="archives.html" class="menu-link">Архив матчей</a>
-</div>
-
+        <div style="text-align: center; margin: 10px;">
+            <a href="where-to-watch.html" class="menu-link">Где смотреть</a>
+            <a href="partners.html" class="menu-link">Наши партнёры</a>
+            <a href="archives.html" class="menu-link">Архив матчей</a>
+        </div>
 
         <img src="img/logo.png" alt="SPORT2025 STREAM Logo" class="logo" />
         <h1>SPORT2025-STREAM</h1>
     </header>
 
     <main>
-
         <!-- Плеер -->
-        <div id="youtubePlayer" class="player-container">
+        <div id="youtubePlayer" class="player-container" style="display: none;">
             <iframe id="ytFrame" width="100%" height="450" frameborder="0" allowfullscreen></iframe>
         </div>
 
         <video id="videoPlayer" controls width="100%" height="auto" style="max-width: 800px; margin: 20px auto; display: none;"></video>
 
         <!-- Расписание матчей -->
-           <section>
-    <h2 id="matchTitle">Сегодняшние матчи</h2>
+        <section>
+            <h2 id="matchTitle">Сегодняшние матчи</h2>
 
-    <!-- КНОПКА Обновить -->
-    <div style="text-align: center; margin-bottom: 15px;">
-        <button onclick="loadMatches()">🔄 Обновить матчи</button>
-    </div>
+            <!-- КНОПКА Обновить -->
+            <div style="text-align: center; margin-bottom: 15px;">
+                <button onclick="loadMatches()">🔄 Обновить матчи</button>
+            </div>
 
-    <div class="match-list" id="match-list"></div>
+            <div class="match-list" id="match-list"></div>
         </section>
-                   
+
         <!-- Реклама -->
         <div class="ads">
-    <a href="https://fonbet.ru/?ref=YOUR_REF" target="_blank">Fonbet</a>
-    <a href="https://melbet.ru/?ref=YOUR_REF" target="_blank">Melbet</a>
-    <a href="https://paribet.ru/?ref=YOUR_REF" target="_blank">Paribet</a>
-    <a href="https://winline.ru/?ref=YOUR_REF" target="_blank">Winline</a>
-    <a href="https://ligastavok.ru/?ref=свою рефералку" target="_blank">Liga Stavok</a>
-    <a href="https://1xbet.com/?ref=YOUR_REF" target="_blank">1XBET</a>
-       </div>
-        
+            <a href="https://fonbet.ru/?ref=YOUR_REF" target="_blank">Fonbet</a>
+            <a href="https://melbet.ru/?ref=YOUR_REF" target="_blank">Melbet</a>
+            <a href="https://paribet.ru/?ref=YOUR_REF" target="_blank">Paribet</a>
+            <a href="https://winline.ru/?ref=YOUR_REF" target="_blank">Winline</a>
+            <a href="https://ligastavok.ru/?ref=YOUR_REF" target="_blank">Liga Stavok</a>
+            <a href="https://1xbet.com/?ref=YOUR_REF" target="_blank">1XBET</a>
+        </div>
     </main>
-    
+
     <footer>
         <p>© 2025 sport2025-stream.ru | Все права защищены</p>
         <button onclick="toggleTheme()">Переключить тему</button>
         <a href="about.html">О сайте</a> | 
         <a href="privacy.html">Политика конфиденциальности</a>
-    </p>
-</footer>
+    </footer>
 
     <!-- Подключение hls.js -->
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script src="js/script.js"></script>
 
+    <!-- Функция playStream -->
     <script>
         function playStream(url, type) {
             const ytPlayer = document.getElementById('youtubePlayer');
@@ -157,6 +152,3 @@
     </script>
 </body>
 </html>
-
-
-
