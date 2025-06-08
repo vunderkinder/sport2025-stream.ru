@@ -1,21 +1,21 @@
 [
     {
         "title": "Футбол: Аль-Иттихад — Манчестер Сити",
-        "category": "футбол",
+        "category": "Футбол",
         "date": "2025-12-15",
         "time": "21:00",
         "stream": "https://example.com/fifa-club-world-cup-1.m3u8"
     },
     {
         "title": "Футбол: Леон — Урава Ред Даймондс",
-        "category": "футбол",
+        "category": "Футбол",
         "date": "2025-12-16",
         "time": "20:00",
         "stream": "https://example.com/fifa-club-world-cup-2.m3u8"
     },
     {
         "title": "Футбол: Манчестер Сити — Финалист TBD",
-        "category": "футбол",
+        "category": "Футбол",
         "date": "2025-12-22",
         "time": "21:00",
         "stream": "https://example.com/fifa-club-world-cup-final.m3u8"
