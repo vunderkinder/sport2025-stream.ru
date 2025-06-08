@@ -9,14 +9,24 @@
 </head>
 <body>
   <header>
-    <h1>SPORT2025-STREAM</h1>
-    <nav class="menu-top">
+  <div class="top-bar">
+    <h1 class="site-title">SPORT2025-STREAM</h1>
+    <nav class="top-nav">
       <a href="index.html">Главная</a>
       <a href="where-to-watch.html">Где смотреть</a>
-      <a href="archives.html">Архив матчей</a>
       <a href="partners.html">Наши партнёры</a>
+      <a href="archives.html">Архив матчей</a>
     </nav>
-  </header>
+  </div>
+  <nav class="categories">
+    <button class="category-btn" onclick="showCategory('все')">Все</button>
+    <button class="category-btn" onclick="showCategory('футбол')">Футбол</button>
+    <button class="category-btn" onclick="showCategory('хоккей')">Хоккей</button>
+    <button class="category-btn" onclick="showCategory('киберспорт')">Киберспорт</button>
+    <button class="category-btn" onclick="showCategory('другое')">Другое</button>
+  </nav>
+</header>
+
   <main>
     <section class="content">
       <h2>Наши официальные партнёры</h2>
