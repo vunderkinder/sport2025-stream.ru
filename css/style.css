@@ -281,3 +281,53 @@ body.dark-theme footer a {
   background: #ffeb3b;      /* жёлтый фон при наведении */
   color: #121212;           /* чёрный текст при наведении */
 }
+/* ==== Улучшаем видимость кнопок ==== */
+
+/* Основной сброс для всех кнопок обновления и просмотра */
+button {
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* Кнопка “Обновить матчи” */
+button[onclick="loadMatches()"] {
+  background-color: #fff;
+  color: #007bff;
+  border: 2px solid #007bff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+button[onclick="loadMatches()"]:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Кнопка “Смотреть” (для плейлиста) */
+.match-list button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+.match-list button:hover {
+  background-color: #0056b3;
+}
+
+/* Специфические стили для тёмной темы */
+body.dark-theme button[onclick="loadMatches()"] {
+  background-color: #333;
+  color: #fff;
+  border-color: #fff;
+}
+body.dark-theme button[onclick="loadMatches()"]:hover {
+  background-color: #555;
+}
+
+body.dark-theme .match-list button {
+  background-color: #1e88e5;
+}
+body.dark-theme .match-list button:hover {
+  background-color: #1565c0;
+}
