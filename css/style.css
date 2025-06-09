@@ -331,3 +331,10 @@ body.dark-theme .match-list button {
 body.dark-theme .match-list button:hover {
   background-color: #1565c0;
 }
+.tournament-name {
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 14px;
+}
