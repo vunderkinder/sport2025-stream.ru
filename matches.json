@@ -1,148 +1,162 @@
 [
-  {
-    "title": "Аль-Ахли Каир — Интер Майами",
-    "tournament": "Клубный чемпионат мира, 1-й тур, групповая стадия",
-    "category": "футбол",
-    "source": "clubwc",
-    "image": "alahly-intermiami.jpg",
-    "date": "2025-06-15T02:00:00",
-    "url": "https://example.com/stream1.m3u8",
-    "type": "m3u8"
-},
-  {
-    "title": "Бавария — Окленд Сити",
-    "tournament": "Клубный чемпионат мира, 1-й тур, групповая стадия",
-    "category": "футбол",
-    "source": "clubwc",
-    "image": "bayern-auckland.jpg",
-    "date": "2025-06-15T02:00:00",
-    "url": "https://example.com/stream1.m3u8",
-    "type": "m3u8"
-  },
-  {
-    "id": "match-3",
-    "title": "ПСЖ — Атлетико Мадрид",
-    "datetime": "2025-06-15T21:00:00+03:00",
-    "thumbnail": "https://example.com/img/clubwc/psg-atletico.jpg",
-    "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
-    "type": "m3u8",
-    "category": "футбол"
-  },
-  {
-    "id": "match-4",
-    "title": "Палмейрас — Порту",
-    "datetime": "2025-06-15T23:59:00+03:00",
-    "thumbnail": "https://example.com/img/clubwc/palmeiras-porto.jpg",
-    "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
-    "type": "m3u8",
-    "category": "футбол"
-  },
-  {
-    "id": "match-5",
-    "title": "Ботафого — Сиэтл Саундерс",
-    "datetime": "2025-06-16T04:00:00+03:00",
-    "thumbnail": "https://example.com/img/clubwc/botafogo-seattle.jpg",
-    "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
-    "type": "m3u8",
-    "category": "футбол"
-  },
-  {
-    "id": "match-6",
-    "title": "Челси — Лос-Анджелес ФК",
-    "datetime": "2025-06-16T21:00:00+03:00",
-    "thumbnail": "https://example.com/img/clubwc/chelsea-lafc.jpg",
-    "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
-    "type": "m3u8",
-    "category": "футбол"
-  },
-  {
-    "id": "match-7",
-    "title": "Бока Хуниорс — Бенфика",
-    "datetime": "2025-06-16T23:59:00+03:00",
-    "thumbnail": "https://example.com/img/clubwc/boca-benfica.jpg",
-    "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
-    "type": "m3u8",
-    "category": "футбол"
-  },
-  {
-    "id": "match-8",
-    "title": "Фламенго — Эсперанс Тунис",
-    "datetime": "2025-06-17T03:00:00+03:00",
-    "thumbnail": "https://example.com/img/clubwc/flamengo-esperance.jpg",
-    "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
-    "type": "m3u8",
-    "category": "футбол"
-  },
-  {
-    "id": "match-9",
-    "title": "Флуминенсе — Боруссия Дортмунд",
-    "datetime": "2025-06-17T18:00:00+03:00",
-    "thumbnail": "https://example.com/img/clubwc/fluminense-dortmund.jpg",
-    "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
-    "type": "m3u8",
-    "category": "футбол"
-  },
-  {
-    "id": "match-10",
-    "title": "Ривер Плейт — Урава Ред Даймондс",
-    "datetime": "2025-06-17T21:00:00+03:00",
-    "thumbnail": "https://example.com/img/clubwc/river-urawa.jpg",
-    "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
-    "type": "m3u8",
-    "category": "футбол"
-  },
-  {
-    "id": "match-11",
-    "title": "Ульсан HD — Мамелоди Сандаунз",
-    "datetime": "2025-06-17T23:59:00+03:00",
-    "thumbnail": "https://example.com/img/clubwc/ulsan-sundowns.jpg",
-    "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
-    "type": "m3u8",
-    "category": "футбол"
-  },
-  {
-    "id": "match-12",
-    "title": "Монтеррей — Интер",
-    "datetime": "2025-06-18T03:00:00+03:00",
-    "thumbnail": "https://example.com/img/clubwc/monterrey-inter.jpg",
-    "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
-    "type": "m3u8",
-    "category": "футбол"
-  },
-  {
-    "id": "match-13",
-    "title": "Манчестер Сити — Видад Касабланка",
-    "datetime": "2025-06-18T18:00:00+03:00",
-    "thumbnail": "https://example.com/img/clubwc/mancity-wydad.jpg",
-    "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
-    "type": "m3u8",
-    "category": "футбол"
-  },
-  {
-    "id": "match-14",
-    "title": "Реал Мадрид — Аль-Хиляль Эр-Рияд",
-    "datetime": "2025-06-18T21:00:00+03:00",
-    "thumbnail": "https://example.com/img/clubwc/realmadrid-alhilal.jpg",
-    "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
-    "type": "m3u8",
-    "category": "футбол"
-  },
-  {
-    "id": "match-15",
-    "title": "Пачука — Ред Булл Зальцбург",
-    "datetime": "2025-06-18T23:59:00+03:00",
-    "thumbnail": "https://example.com/img/clubwc/pachuca-salzburg.jpg",
-    "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
-    "type": "m3u8",
-    "category": "футбол"
-  },
-  {
-    "id": "match-16",
-    "title": "Аль-Айн — Ювентус",
-    "datetime": "2025-06-19T03:00:00+03:00",
-    "thumbnail": "https://example.com/img/clubwc/alain-juventus.jpg",
-    "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
-    "type": "m3u8",
-    "category": "футбол"
-  }
+    {
+        "title": "Аль-Ахли Каир — Интер Майами",
+        "tournament": "Клубный чемпионат мира, 1-й тур, групповая стадия",
+        "category": "футбол",
+        "source": "clubwc",
+        "image": "alahly-intermiami.jpg",
+        "date": "2025-06-15T02:00:00",
+        "url": "https://example.com/stream1.m3u8",
+        "type": "m3u8"
+    },
+    {
+        "title": "Бавария — Окленд Сити",
+        "tournament": "Клубный чемпионат мира, 1-й тур, групповая стадия",
+        "category": "футбол",
+        "source": "clubwc",
+        "image": "bayern-auckland.jpg",
+        "date": "2025-06-15T18:00:00",
+        "url": "https://example.com/stream2.m3u8",
+        "type": "m3u8"
+    },
+    {
+        "title": "ПСЖ — Атлетико Мадрид",
+        "tournament": "Клубный чемпионат мира, 1-й тур, групповая стадия",
+        "category": "футбол",
+        "source": "clubwc",
+        "image": "psg-atletico.jpg",
+        "date": "2025-06-15T21:00:00",
+        "url": "https://example.com/stream3.m3u8",
+        "type": "m3u8"
+    },
+    {
+        "title": "Палмейрас — Порту",
+        "tournament": "Клубный чемпионат мира, 1-й тур, групповая стадия",
+        "category": "футбол",
+        "source": "clubwc",
+        "image": "palmeiras-porto.jpg",
+        "date": "2025-06-15T23:59:00",
+        "url": "https://example.com/stream4.m3u8",
+        "type": "m3u8"
+    },
+    {
+        "title": "Ботафого — Сиэтл Саундерс",
+        "tournament": "Клубный чемпионат мира, 1-й тур, групповая стадия",
+        "category": "футбол",
+        "source": "clubwc",
+        "image": "botafogo-seattle.jpg",
+        "date": "2025-06-16T04:00:00",
+        "url": "https://example.com/stream5.m3u8",
+        "type": "m3u8"
+    },
+    {
+        "title": "Челси — Лос-Анджелес ФК",
+        "tournament": "Клубный чемпионат мира, 1-й тур, групповая стадия",
+        "category": "футбол",
+        "source": "clubwc",
+        "image": "chelsea-lafc.jpg",
+        "date": "2025-06-16T21:00:00",
+        "url": "https://example.com/stream6.m3u8",
+        "type": "m3u8"
+    },
+    {
+        "title": "Бока Хуниорс — Бенфика",
+        "tournament": "Клубный чемпионат мира, 1-й тур, групповая стадия",
+        "category": "футбол",
+        "source": "clubwc",
+        "image": "boca-benfica.jpg",
+        "date": "2025-06-16T23:59:00",
+        "url": "https://example.com/stream7.m3u8",
+        "type": "m3u8"
+    },
+    {
+        "title": "Фламенго — Эсперанс Тунис",
+        "tournament": "Клубный чемпионат мира, 1-й тур, групповая стадия",
+        "category": "футбол",
+        "source": "clubwc",
+        "image": "flamengo-esperance.jpg",
+        "date": "2025-06-17T03:00:00",
+        "url": "https://example.com/stream8.m3u8",
+        "type": "m3u8"
+    },
+    {
+        "title": "Флуминенсе — Боруссия Дортмунд",
+        "tournament": "Клубный чемпионат мира, 1-й тур, групповая стадия",
+        "category": "футбол",
+        "source": "clubwc",
+        "image": "fluminense-dortmund.jpg",
+        "date": "2025-06-17T18:00:00",
+        "url": "https://example.com/stream9.m3u8",
+        "type": "m3u8"
+    },
+    {
+        "title": "Ривер Плейт — Урава Ред Даймондс",
+        "tournament": "Клубный чемпионат мира, 1-й тур, групповая стадия",
+        "category": "футбол",
+        "source": "clubwc",
+        "image": "river-urawa.jpg",
+        "date": "2025-06-17T21:00:00",
+        "url": "https://example.com/stream10.m3u8",
+        "type": "m3u8"
+    },
+    {
+        "title": "Ульсан HD — Мамелоди Сандаунз",
+        "tournament": "Клубный чемпионат мира, 1-й тур, групповая стадия",
+        "category": "футбол",
+        "source": "clubwc",
+        "image": "ulsan-mamelodi.jpg",
+        "date": "2025-06-17T23:59:00",
+        "url": "https://example.com/stream11.m3u8",
+        "type": "m3u8"
+    },
+    {
+        "title": "Монтеррей — Интер",
+        "tournament": "Клубный чемпионат мира, 1-й тур, групповая стадия",
+        "category": "футбол",
+        "source": "clubwc",
+        "image": "monterrey-inter.jpg",
+        "date": "2025-06-18T03:00:00",
+        "url": "https://example.com/stream12.m3u8",
+        "type": "m3u8"
+    },
+    {
+        "title": "Манчестер Сити — Видад Касабланка",
+        "tournament": "Клубный чемпионат мира, 1-й тур, групповая стадия",
+        "category": "футбол",
+        "source": "clubwc",
+        "image": "mancity-vidad.jpg",
+        "date": "2025-06-18T18:00:00",
+        "url": "https://example.com/stream13.m3u8",
+        "type": "m3u8"
+    },
+    {
+        "title": "Реал Мадрид — Аль-Хиляль Эр-Рияд",
+        "tournament": "Клубный чемпионат мира, 1-й тур, групповая стадия",
+        "category": "футбол",
+        "source": "clubwc",
+        "image": "realmadrid-alhilal.jpg",
+        "date": "2025-06-18T21:00:00",
+        "url": "https://example.com/stream14.m3u8",
+        "type": "m3u8"
+    },
+    {
+        "title": "Пачука — Ред Булл Зальцбург",
+        "tournament": "Клубный чемпионат мира, 1-й тур, групповая стадия",
+        "category": "футбол",
+        "source": "clubwc",
+        "image": "pachuca-salzburg.jpg",
+        "date": "2025-06-18T23:59:00",
+        "url": "https://example.com/stream15.m3u8",
+        "type": "m3u8"
+    },
+    {
+        "title": "Аль-Айн — Ювентус",
+        "tournament": "Клубный чемпионат мира, 1-й тур, групповая стадия",
+        "category": "футбол",
+        "source": "clubwc",
+        "image": "alain-juventus.jpg",
+        "date": "2025-06-19T03:00:00",
+        "url": "https://example.com/stream16.m3u8",
+        "type": "m3u8"
+    }
 ]
