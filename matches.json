@@ -9,13 +9,13 @@
     "type": "m3u8"
 },
   {
-    "id": "match-2",
     "title": "Бавария — Окленд Сити",
-    "datetime": "2025-06-15T18:00:00+03:00",
-    "thumbnail": "https://example.com/img/clubwc/bayern-auckland.jpg",
-    "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
-    "type": "m3u8",
-    "category": "футбол"
+    "category": "футбол",
+    "source": "clubwc",
+    "image": "bayern-auckland.jpg",
+    "date": "2025-06-15T02:00:00",
+    "url": "https://example.com/stream1.m3u8",
+    "type": "m3u8"
   },
   {
     "id": "match-3",
