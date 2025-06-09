@@ -10,12 +10,10 @@ function renderMatches(matches) {
         const matchDiv = document.createElement('div');
         matchDiv.className = 'match-item';
 
-        // Генерация картинки по source (ты указывал source = "clubwc" для FIFA)
         const imgSrc = `img/clubwc/${match.image}`;
 
-        // Форматирование даты
         const date = new Date(match.date);
-        const formattedDate = date.toLocaleString('ru-RU', {
+        const formattedDate = isNaN(date) ? 'Дата не указана' : date.toLocaleString('ru-RU', {
             day: '2-digit',
             month: '2-digit',
             year: 'numeric',
@@ -24,6 +22,7 @@ function renderMatches(matches) {
         });
 
         matchDiv.innerHTML = `
+            <div class="tournament-name">${match.tournament}</div>
             <img src="${imgSrc}" alt="${match.title}" class="match-thumb">
             <div class="match-info">
                 <strong>${match.title}</strong><br/>
