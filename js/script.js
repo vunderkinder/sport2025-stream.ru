@@ -1,32 +1,40 @@
 let currentCategory = 'все';
 let allMatches = [];
 
+// Функция рендеринга матчей
 function renderMatches(matches) {
     const matchList = document.getElementById('match-list');
     matchList.innerHTML = '';
 
-    if (matches.length === 0) {
-        matchList.innerHTML = '<p>Нет матчей в этой категории.</p>';
-        return;
-    }
-
     matches.forEach(match => {
         const matchDiv = document.createElement('div');
-        matchDiv.className = 'match-card';
+        matchDiv.className = 'match-item';
+
+        // Генерация картинки по source (ты указывал source = "clubwc" для FIFA)
+        const imgSrc = `img/clubwc/${match.image}`;
+
+        // Форматирование даты
+        const date = new Date(match.date);
+        const formattedDate = date.toLocaleString('ru-RU', {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+        });
 
         matchDiv.innerHTML = `
-            <img src="${match.image}" alt="${match.title}" class="match-img" />
+            <img src="${imgSrc}" alt="${match.title}" class="match-thumb">
             <div class="match-info">
                 <strong>${match.title}</strong><br/>
-                ${match.date}<br/>
-                <button onclick="playStream('${match.url}', '${match.type}')">Смотреть</button>
+                ${formattedDate}
             </div>
+            <button class="watch-btn" onclick="playStream('${match.url}', '${match.type}')">Смотреть</button>
         `;
 
         matchList.appendChild(matchDiv);
     });
 }
-
 function playStream(url, type) {
     window.open(url, '_blank');
 }
